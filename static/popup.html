@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>BlockTheNoise</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" alt="" width="22" height="22" />
+      <h1>BlockTheNoise</h1>
+      <span id="block-pill" class="pill"></span>
+    </header>
+
+    <div class="trial-banner" id="trial-banner" hidden>
+      <span id="trial-text"></span>
+      <button id="btn-open-unlock" class="link">Unlock</button>
+    </div>
+
+    <section id="paywall" class="paywall" hidden>
+      <button id="btn-close-unlock" class="link back" hidden>← Back</button>
+      <img src="icons/icon128.png" alt="" width="64" height="64" />
+      <h2 id="paywall-title"></h2>
+      <p id="paywall-text"></p>
+      <button id="btn-buy" class="primary wide"></button>
+      <p class="fine">One-time payment. No subscription. Your license key arrives by email.</p>
+      <form id="license-form" class="add-form">
+        <input id="license-key" placeholder="Paste your license key" autocomplete="off" spellcheck="false" required />
+        <button type="submit" id="btn-activate">Activate</button>
+      </form>
+      <p class="error" id="license-error" hidden></p>
+    </section>
+
+    <div id="app-main">
+    <nav class="tabs" role="tablist">
+      <button role="tab" data-tab="focus" aria-selected="true">Focus</button>
+      <button role="tab" data-tab="music" aria-selected="false">Music</button>
+      <button role="tab" data-tab="block" aria-selected="false">Block</button>
+    </nav>
+
+    <section id="tab-focus" class="panel" role="tabpanel">
+      <div class="ring" id="ring">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="ring-track" cx="60" cy="60" r="52" />
+          <circle class="ring-progress" id="ring-progress" cx="60" cy="60" r="52" />
+        </svg>
+        <div class="ring-text">
+          <div class="time" id="time">25:00</div>
+          <div class="phase" id="phase">Focus</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="btn-reset" class="ghost" title="Reset this phase">Reset</button>
+        <button id="btn-start" class="primary">Start</button>
+        <button id="btn-skip" class="ghost" title="Skip to next phase">Skip</button>
+      </div>
+      <div class="sessions">
+        <span id="sessions-dots" aria-hidden="true"></span>
+        <span id="sessions-text"></span>
+        <button id="btn-reset-sessions" class="link">reset</button>
+      </div>
+      <details class="settings">
+        <summary>Timer settings</summary>
+        <div class="grid">
+          <label>Focus <span><input type="number" id="set-focus" min="1" max="180" /> min</span></label>
+          <label>Short break <span><input type="number" id="set-short" min="1" max="60" /> min</span></label>
+          <label>Long break <span><input type="number" id="set-long" min="1" max="90" /> min</span></label>
+          <label>Long break every <span><input type="number" id="set-every" min="1" max="12" /> sessions</span></label>
+        </div>
+        <label class="check"><input type="checkbox" id="set-autostart" /> Start the next phase automatically</label>
+      </details>
+    </section>
+
+    <section id="tab-music" class="panel" role="tabpanel" hidden>
+      <div class="now-playing">
+        <button id="btn-music" class="primary round" aria-label="Play">▶</button>
+        <div class="np-text">
+          <div class="np-label" id="np-label">Ready</div>
+          <div class="np-name" id="np-name"></div>
+        </div>
+      </div>
+      <label class="volume">🔈 <input type="range" id="volume" min="0" max="1" step="0.01" /> 🔊</label>
+      <p class="error" id="music-error" hidden></p>
+      <ul class="list" id="track-list"></ul>
+      <form id="add-track" class="add-form">
+        <input id="track-name" placeholder="Name" required maxlength="60" />
+        <input id="track-url" type="url" placeholder="https://…/stream.mp3" required />
+        <button type="submit">Add</button>
+      </form>
+      <label class="check"><input type="checkbox" id="set-music-follow" /> Play during focus, pause on breaks</label>
+    </section>
+
+    <section id="tab-block" class="panel" role="tabpanel" hidden>
+      <label class="switch-row">
+        <span>Block distracting sites</span>
+        <input type="checkbox" id="set-blocking" class="switch" />
+      </label>
+      <label class="check"><input type="checkbox" id="set-focus-only" /> Only while a focus session is running</label>
+      <p class="hint" id="block-status"></p>
+      <ul class="list" id="site-list"></ul>
+      <form id="add-site" class="add-form">
+        <input id="site-input" placeholder="e.g. twitter.com" required />
+        <button type="submit">Add</button>
+      </form>
+      <p class="error" id="site-error" hidden></p>
+    </section>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

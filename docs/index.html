@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BlockTheNoise: block distractions, focus, flow</title>
+    <meta name="description" content="A Chrome extension that blocks distracting sites, runs Pomodoro focus sessions and plays music for creative flow. Free for 14 days, then ₹800 once." />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero-crop { aspect-ratio: 560 / 800; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5); max-width: 460px; justify-self: center; width: 100%; }
+      .hero-crop img { width: 100%; height: 100%; object-fit: cover; object-position: 90% 50%; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="./"><img src="images/icon.png" alt="" />BlockTheNoise</a>
+        <nav>
+          <a href="#features" class="hide-sm">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="wrap">
+          <div>
+            <p class="eyebrow">Chrome extension</p>
+            <h1>Block the noise. Do your best work.</h1>
+            <p class="lead">
+              BlockTheNoise blocks distracting sites, times your focus sessions and plays music that keeps you in flow, all from one
+              button in your toolbar.
+            </p>
+            <div class="actions">
+              <!-- After publishing, replace this span with: <a class="button" href="YOUR_CHROME_WEB_STORE_URL">Add to Chrome, it's free for 14 days</a> -->
+              <span class="button soon">Coming soon to the Chrome Web Store</span>
+              <a class="button secondary" href="#pricing">See pricing</a>
+            </div>
+            <p class="note">Free for 14 days. No card, no sign-up. Then ₹800 once, no subscription.</p>
+          </div>
+          <div class="hero-crop"><img src="images/focus.png" alt="The BlockTheNoise popup showing a focus timer with 18 minutes left" /></div>
+        </div>
+      </div>
+
+      <section id="features">
+        <div class="wrap">
+          <p class="eyebrow">Features</p>
+          <h2>Three focus tools in one place</h2>
+          <p class="intro">Start a focus session, and the feeds go quiet while the music keeps you going. Take a break, and it all eases off.</p>
+          <div class="features">
+            <article class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" /><path d="M5.6 18.4 18.4 5.6" /></svg>
+              </div>
+              <h3>Site blocker</h3>
+              <p>Instagram, YouTube and Facebook are blocked from the start.</p>
+              <ul>
+                <li>Add any other site in one click</li>
+                <li>Block all the time, or only while you focus</li>
+                <li>Catches tabs that are already open</li>
+              </ul>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5M9 2h6" /></svg>
+              </div>
+              <h3>Pomodoro timer</h3>
+              <p>25-minute focus sessions with short breaks and a longer break after every four.</p>
+              <ul>
+                <li>Set your own session lengths</li>
+                <li>Minutes left on the toolbar icon</li>
+                <li>A notification when each phase ends</li>
+              </ul>
+            </article>
+            <article class="feature">
+              <div class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /></svg>
+              </div>
+              <h3>Flow music</h3>
+              <p>Ambient, downtempo and instrumental hip-hop radio, plus noise tracks that work offline.</p>
+              <ul>
+                <li>Starts when you focus, pauses on breaks</li>
+                <li>Brown and pink noise, no internet needed</li>
+                <li>Add your own stream links</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <p class="eyebrow">A closer look</p>
+          <h2>Calm by design</h2>
+          <p class="intro">No feeds, no badges begging for attention. Just a timer, your music and a gentle nudge back to work when you wander.</p>
+          <div class="gallery">
+            <img src="images/music.png" alt="The music tab, playing the Drone Zone station" loading="lazy" />
+            <img src="images/block.png" alt="The block tab with six blocked sites" loading="lazy" />
+            <img src="images/blocked.png" alt="The page shown instead of a blocked site, with the focus timer" loading="lazy" />
+            <img src="images/focus.png" alt="The focus timer mid-session" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="wrap">
+          <p class="eyebrow">Pricing</p>
+          <h2>Try it free. Pay once if it helps.</h2>
+          <p class="intro">No subscription and no account. Every feature is included in the trial, so you'll know if it works for you before you pay anything.</p>
+          <div class="pricing">
+            <div class="plan">
+              <h3>Free trial</h3>
+              <div class="price">₹0 <small>for 14 days</small></div>
+              <p class="sub">Starts when you install. No card needed.</p>
+              <ul>
+                <li>Every feature unlocked</li>
+                <li>No sign-up or account</li>
+                <li>Nothing renews automatically</li>
+              </ul>
+            </div>
+            <div class="plan featured">
+              <h3>Lifetime license</h3>
+              <div class="price">₹800 <small>one-time</small></div>
+              <p class="sub">Keep BlockTheNoise after your trial.</p>
+              <ul>
+                <li>Every feature, for good</li>
+                <li>Use it on up to 3 browsers</li>
+                <li>Future updates included</li>
+                <li>Refund within 7 days if it's not for you</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions</h2>
+          <div class="faq">
+            <details>
+              <summary>What happens when the free trial ends?</summary>
+              <p>Blocking turns off and the timer and music stop. The popup shows a button to buy a license. Nothing is charged automatically, because you never enter a card for the trial.</p>
+            </details>
+            <details>
+              <summary>How do I unlock it after buying?</summary>
+              <p>Your license key arrives by email right after payment. Open the BlockTheNoise popup, click Unlock, paste the key and press Activate.</p>
+            </details>
+            <details>
+              <summary>Who processes my payment?</summary>
+              <p>Payments are handled by Dodo Payments, our reseller and merchant of record. Your card or UPI details go to them, never to us or to the extension.</p>
+            </details>
+            <details>
+              <summary>Does BlockTheNoise track what I do?</summary>
+              <p>No. There are no analytics and no tracking. Your settings stay in your browser. The only thing sent anywhere is your license key, to check it with Dodo Payments. Read the <a href="privacy.html">privacy policy</a>.</p>
+            </details>
+            <details>
+              <summary>Which browsers does it work in?</summary>
+              <p>Google Chrome, plus browsers built on Chrome that can install from the Chrome Web Store, such as Microsoft Edge and Brave.</p>
+            </details>
+            <details>
+              <summary>Can I get a refund?</summary>
+              <p>Yes. If BlockTheNoise isn't right for you, ask within 7 days of buying for a full refund. See the <a href="refund.html">refund policy</a>.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 BlockTheNoise. Contact: <a href="mailto:pranayranka45@gmail.com">pranayranka45@gmail.com</a></span>
+        <nav>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="refund.html">Refunds</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "blockthenoise",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stay focused: block distracting sites, run Pomodoro sessions, and play flow-friendly music.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p . && node scripts/copy-static.mjs",
+    "watch": "node scripts/copy-static.mjs && tsc -p . --watch",
+    "icons": "node scripts/make-icons.mjs",
+    "typecheck": "tsc -p . --noEmit",
+    "package": "node scripts/package.mjs",
+    "store-graphics": "node scripts/make-store-graphics.mjs"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.7",
+    "typescript": "^7.0.2"
+  }
+}

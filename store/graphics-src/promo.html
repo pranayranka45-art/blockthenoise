@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Store promo tile</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; overflow: hidden; }
+      body {
+        background:
+          radial-gradient(circle at 85% 20%, rgba(229, 72, 77, 0.30), transparent 50%),
+          #0d0f14;
+        color: #f1f3f8;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        display: flex;
+        align-items: center;
+      }
+      .wrap { display: flex; align-items: center; }
+      img { flex: none; filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.5)); }
+      h1 { margin: 0; font-weight: 700; letter-spacing: -0.5px; line-height: 1.05; }
+      .tag { color: #a0a7b6; margin-top: 10px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+      .chips span { border: 1px solid #343a48; color: #d5d9e2; border-radius: 999px; padding: 4px 12px; white-space: nowrap; }
+      .chips span::before { content: "● "; color: #e5484d; }
+
+      /* Small tile: 440x280 */
+      body.small { width: 440px; height: 280px; padding: 0 32px; }
+      .small .wrap { gap: 22px; }
+      .small img { width: 104px; height: 104px; }
+      .small h1 { font-size: 34px; }
+      .small .tag { font-size: 16px; }
+      .small .chips { display: none; } /* too small to read at this size */
+
+      /* Marquee: 1400x560 */
+      body.marquee { width: 1400px; height: 560px; padding: 0 120px; }
+      .marquee .wrap { gap: 56px; }
+      .marquee img { width: 240px; height: 240px; }
+      .marquee h1 { font-size: 92px; }
+      .marquee .tag { font-size: 30px; margin-top: 16px; }
+      .marquee .chips { margin-top: 30px; gap: 12px; }
+      .marquee .chips span { font-size: 22px; padding: 8px 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="/_g/icon512.png" alt="" />
+      <div>
+        <h1>BlockTheNoise</h1>
+        <div class="tag">Stay focused. Do your best work.</div>
+        <div class="chips"><span>Site blocker</span><span>Focus timer</span><span>Flow music</span></div>
+      </div>
+    </div>
+    <script>
+      document.body.className = new URLSearchParams(location.search).get("size") ?? "small";
+    </script>
+  </body>
+</html>
